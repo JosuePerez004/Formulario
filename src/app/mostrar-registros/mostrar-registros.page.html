@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar > 
+    <ion-buttons slot="start">
+
+        <ion-back-button defaultHref="home"></ion-back-button>
+    
+    </ion-buttons>
+    <ion-title>mostrarRegistros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @for (persona of personas; track $index) {
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{persona["nombre"]}} {{persona["apellido"]}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Edad: {{persona["edad"]}} <br>
+        Sexo: {{persona["sexo"]}}
+      </ion-card-content>
+    </ion-card>
+
+  }
+  
+ 
+</ion-content>

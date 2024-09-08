@@ -1,0 +1,7 @@
+{
+  "name": "Formulario_de_Registros_usuarios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

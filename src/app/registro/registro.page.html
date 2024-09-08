@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Formulario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <form [formGroup]="registro">
+
+          <ion-item>
+            <ion-input formControlName="nombre" label="Nombre:" type="text"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-input formControlName="apellido" label="Apellido:" type="text"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-input formControlName="edad" label="Edad:" type="text"></ion-input>
+          </ion-item>
+    
+          <ion-item >
+          
+            <ion-list>
+              <ion-item lines="none"><ion-label>Sexo:</ion-label></ion-item>
+              <ion-radio-group formControlName="sexo">
+
+                  <ion-radio value="Masculino"> Masculino </ion-radio>
+                  <ion-radio value="Femenino"> Femenino </ion-radio>
+                  
+              </ion-radio-group>
+            </ion-list>
+          </ion-item>
+          <ion-item >
+            <ion-input formControlName="correo" label="Correo:" type="email"></ion-input>
+          </ion-item>
+          <ion-item >
+            <ion-input formControlName="contraseña" label="Contraseña:" type="password"></ion-input>
+          </ion-item>
+
+        </form>
+        
+        
+      </ion-list>
+      <ion-button (click)="registrar()">Registrar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
